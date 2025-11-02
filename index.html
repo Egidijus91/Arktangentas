@@ -3,19 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mano pirmas puslapis</title>
+<title>Arktangentas – Matematikos korepetitorius</title>
 
 <style>
+:root {
+  --primary: #6B0F2B;
+  --secondary: #A63C58;
+  --bg-light: #F9F4F3;
+}
+
+/* Bendri stiliai */
 body {
   font-family: Arial, sans-serif;
-  background-color: #F9F4F3;
-  text-align: center;
-  padding-top: 100px;
+  background-color: var(--bg-light);
   color: #191919;
+  margin: 0;
+  text-align: center;
+}
+
+/* Meniu juosta */
+nav {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--secondary);
+}
+
+/* Hero turinys */
+main {
+  padding-top: 80px;
 }
 
 h1 {
-  color: #6B0F2B;
+  color: var(--primary);
   margin-bottom: 10px;
 }
 
@@ -24,9 +60,10 @@ p {
   margin-bottom: 40px;
 }
 
+/* Mygtukas */
 .button-link {
   display: inline-block;
-  background: #6B0F2B;
+  background: var(--primary);
   color: #fff;
   padding: 14px 32px;
   border-radius: 40px;
@@ -37,24 +74,31 @@ p {
 }
 
 .button-link:hover {
-  background: #A63C58;
+  background: var(--secondary);
   transform: translateY(-3px);
 }
 </style>
 </head>
 
 <body>
-  <h1>Sveiki gyvi atvykę į mano svetainę! Ahoj!</h1>
-  <a href="Fizikos-mokymo-7-klaseje-ilgalaikis-teminis-planas.pdf" 
-   target="_blank" 
-   style="display:inline-block; background:#6B0F2B; color:white; padding:12px 26px; border-radius:6px; text-decoration:none; font-weight:600; margin-top:24px;">
-   Peržiūrėti fizikos ilgalaikį teminį planą (7 klasė)
-</a>
 
+<!-- Meniu -->
+<nav>
+  <a href="index.html">Apie mus</a>
+  <a href="registracija.html">Registracija</a>
+  <a href="kainos.html">Kainos</a>
+  <a href="kontaktai.html">Kontaktai</a>
+</nav>
+
+<!-- Turinys -->
+<main>
+  <h1>Sveiki atvykę į Arktangento svetainę!</h1>
   <p>Paspauskite žemiau esantį mygtuką, kad peržiūrėtumėte fizikos ilgalaikį teminį planą (7 klasė).</p>
 
   <a href="Fizikos-mokymo-7-klaseje-ilgalaikis-teminis-planas.pdf" target="_blank" class="button-link">
     📘 Peržiūrėti fizikos planą
   </a>
+</main>
+
 </body>
 </html>
